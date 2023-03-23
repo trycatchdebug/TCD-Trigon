@@ -1,0 +1,67 @@
+:root {
+  --length: 200px;
+  --sqrt3: 1.73205;
+  --rotation: 0deg;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 1rem;
+  min-height: 100vh;
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+  background-color: black;
+}
+
+.rotate0 {
+  transform: rotate(var(--rotation));
+  transition-duration: 500ms;
+  transform-origin: calc(2 * var(--length) / var(--sqrt3))
+    calc(var(--length));
+}
+
+.rotate120 {
+  transform: rotate(var(--rotation));
+  translate: -5% 20%;
+}
+
+.rotate240 {
+  transform: rotate(var(--rotation));
+  translate: -20% 5%;
+}
+
+.container {
+  width: calc(2 * var(--length));
+  height: calc(var(--sqrt3) * var(--length));
+  background: transparent;
+}
+
+.box1 {
+  margin-left: calc(var(--length) / 2);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  width: var(--length);
+  height: calc(var(--sqrt3) * var(--length) / 2);
+  background-color: #19a7ce;
+}
+
+.container2 {
+  display: flex;
+}
+
+.box2 {
+  margin-left: 0;
+  width: var(--length);
+  height: calc(var(--sqrt3) * var(--length) / 2);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  background-color: #e21818;
+}
+
+.box3 {
+  width: var(--length);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  height: calc(var(--sqrt3) * var(--length) / 2);
+  background-color: #617143;
+}
+
