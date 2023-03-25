@@ -18,18 +18,29 @@ body {
 .rotate0 {
   transform: rotate(var(--rotation));
   transition-duration: 500ms;
-  transform-origin: calc(2 * var(--length) / var(--sqrt3))
-    calc(var(--length));
+  transform-origin: calc(var(--length))
+    calc(2 * var(--length) / var(--sqrt3));
 }
+
+/* Visualize tranform-origin */
+/* .rotate0::after {
+  position: absolute;
+  left: calc(var(--length));
+  top: calc(2 * var(--length) / var(--sqrt3));
+  width: 5px;
+  height: 5px;
+  content: '';
+  background-color: #f0f;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+} */
 
 .rotate120 {
   transform: rotate(var(--rotation));
-  translate: -5% 20%;
 }
 
 .rotate240 {
   transform: rotate(var(--rotation));
-  translate: -20% 5%;
 }
 
 .container {
